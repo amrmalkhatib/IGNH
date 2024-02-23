@@ -1,0 +1,23 @@
+scipy==1.6.3
+numpy==1.22.4
+scikit-image==0.18.1
+scikit-learn==1.2.2
+scikit-posthocs==0.6.7
+seaborn==0.11.2
+pandas==1.2.4
+shap==0.39.0
+shapley-regression @ https://github.com/iancovert/shapley-regression.git
+torch==2.0.0+cu117
+torch-cluster==1.6.0
+torch-geometric==2.0.4
+torch-scatter==2.0.9
+torch-sparse==0.6.13
+torch-spline-conv==1.2.1
+torchaudio==0.10.0+cu113
+torchvision==0.11.0+cu102
+pytorch-tabnet==4.0
+xgboost==1.4.2
+tqdm==4.60.0
+openml==0.14.1
+matplotlib==3.4.1
+matplotlib-inline==0.1.2

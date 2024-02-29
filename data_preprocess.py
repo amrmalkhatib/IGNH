@@ -85,10 +85,10 @@ def compute_adjacency_matrix(data, self_loop_weight, categorical, p_value_thr=0.
                     corr, p_value = kendalltau(data[col_1], data[col_2])
                     corr = np.linalg.norm(corr)
                 elif col_1 in categorical:
-                    encoded_data = pd.get_dummies(data[col_1], columns=categorical)
+                    encoded_data = pd.get_dummies(data[col_1])
                     bis_corr = []
                     for col in encoded_data.columns:
-                        corr, p_value = pointbiserialr(data[col_1], encoded_data[col])
+                        corr, p_value = pointbiserialr(encoded_data[col], data[col_2])
                         if p_value < p_value_thr:
                             bis_corr.append(corr)
                     fisher_z_values = [np.arctanh(r) for r in bis_corr]
@@ -97,10 +97,10 @@ def compute_adjacency_matrix(data, self_loop_weight, categorical, p_value_thr=0.
                     p_value = 0
 
                 elif col_2 in categorical:
-                    encoded_data = pd.get_dummies(data[col_2], columns=categorical)
+                    encoded_data = pd.get_dummies(data[col_2])
                     bis_corr = []
                     for col in encoded_data.columns:
-                        corr, p_value = pointbiserialr(data[col_2], encoded_data[col])
+                        corr, p_value = pointbiserialr(encoded_data[col], data[col_1])
                         if p_value < p_value_thr:
                             bis_corr.append(corr)
                     fisher_z_values = [np.arctanh(r) for r in bis_corr]

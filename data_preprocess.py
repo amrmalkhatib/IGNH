@@ -91,8 +91,9 @@ def compute_adjacency_matrix(data, self_loop_weight, categorical, p_value_thr=0.
                         corr, p_value = pointbiserialr(data[col_1], encoded_data[col])
                         if p_value < p_value_thr:
                             bis_corr.append(corr)
-                    if len(bis_corr) > 0:
-                        corr = sum(bis_corr)/len(bis_corr)
+                    fisher_z_values = [np.arctanh(r) for r in bis_corr]
+                    z = np.mean(fisher_z_values)
+                    corr = np.tanh(z)
                     p_value = 0
 
                 elif col_2 in categorical:
@@ -102,8 +103,9 @@ def compute_adjacency_matrix(data, self_loop_weight, categorical, p_value_thr=0.
                         corr, p_value = pointbiserialr(data[col_2], encoded_data[col])
                         if p_value < p_value_thr:
                             bis_corr.append(corr)
-                    if len(bis_corr)>0:
-                        corr = sum(bis_corr) / len(bis_corr)
+                    fisher_z_values = [np.arctanh(r) for r in bis_corr]
+                    z = np.mean(fisher_z_values)
+                    corr = np.tanh(z)
                     p_value = 0
 
                 else:

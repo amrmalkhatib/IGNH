@@ -18,4 +18,6 @@ This repository hosts the implementation of IGNH (Interpretable Graph Neural Net
 
 
 ## **Citation:**
-Alkhatib, A., Boström, H.: Interpretable Graph Neural Networks for Heterogeneous Tabular Data (2024). (https://arxiv.org/abs/2408.07661)
+1- Alkhatib, A., Ennadir, S., Boström, H., Vazirgiannis, M.: Interpretable Graph Neural Networks for Tabular Data. In Proceedings of the 27th European Conference on Artificial Intelligence. Volume 392, Oct 2024, pp.1848-1855. (https://arxiv.org/abs/2308.08945v3)
+
+2- Alkhatib, A., Boström, H.: Interpretable Graph Neural Networks for Heterogeneous Tabular Data. In Proceedings of the 27th International Conference on Discovery Science, DS 2024, Pisa, Italy, October 14–16, 2024, Proceedings, Part I(https://arxiv.org/abs/2408.07661)

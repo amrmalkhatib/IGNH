@@ -6,7 +6,7 @@ scikit-posthocs==0.6.7
 seaborn==0.11.2
 pandas==1.2.4
 shap==0.39.0
-shapley-regression @ https://github.com/iancovert/shapley-regression.git
+"shapley-regression @ git+https://github.com/iancovert/shapley-regression.git"
 torch==2.0.0+cu117
 torch-cluster==1.6.0
 torch-geometric==2.0.4
